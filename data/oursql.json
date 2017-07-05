@@ -1,0 +1,58 @@
+{
+    "user": {
+        "column_property": {
+            "action": {
+                "data_length": 50,
+                "data_type": "char",
+                "is_foreign": 0,
+                "is_null": 0,
+                "is_primary": 0
+            },
+            "db": {
+                "data_length": 50,
+                "data_type": "char",
+                "is_foreign": 0,
+                "is_null": 0,
+                "is_primary": 0
+            },
+            "id": {
+                "data_length": 2,
+                "data_type": "int",
+                "is_foreign": 0,
+                "is_null": 0,
+                "is_primary": 1
+            },
+            "password": {
+                "data_length": 50,
+                "data_type": "char",
+                "is_foreign": 0,
+                "is_null": 0,
+                "is_primary": 0
+            },
+            "username": {
+                "data_length": 50,
+                "data_type": "char",
+                "is_foreign": 0,
+                "is_null": 0,
+                "is_primary": 0
+            }
+        },
+        "data": [
+            {
+                "action": "use,,help,grant,revoke,create,insert,drop,delete,update,show,select",
+                "db": "oursql,test",
+                "id": 1,
+                "password": "e10adc3949ba59abbe56e057f20f883e",
+                "username": "root"
+            },
+            {
+                "action": "use,help,select,show,update,show",
+                "db": "test",
+                "id": 2,
+                "password": "e10adc3949ba59abbe56e057f20f883e",
+                "username": "guest"
+            }
+        ],
+        "primaty_key": "id"
+    }
+}

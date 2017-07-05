@@ -1,0 +1,72 @@
+{
+    "user": {
+        "column_proterty": {
+            "id": {
+                "data_length": "4",
+                "data_type": "int",
+                "is_foreign": "0",
+                "is_null": "0",
+                "is_primary": "1"
+            },
+            "password": {
+                "data_length": "50",
+                "data_type": "char",
+                "is_foreign": "0",
+                "is_null": "0",
+                "is_primary": "0"
+            },
+            "username": {
+                "data_length": "50",
+                "data_type": "char",
+                "is_foreign": "0",
+                "is_null": "0",
+                "is_primary": "0"
+            }
+        },
+        "data": [
+            {
+                "id": "1",
+                "password": "123456",
+                "username": "root"
+            },
+            {
+                "id": "2",
+                "password": "123456",
+                "username": "'test'"
+            },
+            {
+                "id": "5",
+                "password": "test",
+                "username": "leo"
+            }
+        ],
+        "primary_key": "id"
+    },
+    "user1": {
+        "column_proterty": {
+            "id": {
+                "data_length": "4",
+                "data_type": "int",
+                "is_foreign": "0",
+                "is_null": "0",
+                "is_primary": "1"
+            },
+            "name": {
+                "data_length": "20",
+                "data_type": "char",
+                "is_foreign": "0",
+                "is_null": "0",
+                "is_primary": "0"
+            },
+            "sex": {
+                "data_length": "4",
+                "data_type": "char",
+                "is_foreign": "0",
+                "is_null": "0",
+                "is_primary": "0"
+            }
+        },
+        "data": [],
+        "primary_key": "id"
+    }
+}

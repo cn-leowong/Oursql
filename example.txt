@@ -1,0 +1,77 @@
+
+H:\db\OurSQL_secert>python oursql.py -u root -p 123456
+Login Success!
+
+
+ ______     __  __     ______     ______     ______     __
+/\  __ \   /\ \/\ \   /\  == \   /\  ___\   /\  __ \   /\ \
+\ \ \/\ \  \ \ \_\ \  \ \  __<   \ \___  \  \ \ \/\_\  \ \ \____
+ \ \_____\  \ \_____\  \ \_\ \_\  \/\_____\  \ \___\_\  \ \_____\
+  \/_____/   \/_____/   \/_/ /_/   \/_____/   \/___/_/   \/_____/
+
+
+OurSQL> show databases;
+All databases:
+[*] oursql
+[*] test
+
+OurSQL> help database;
+All databases:
+[*] oursql
+[*] test
+
+OurSQL> use test;
+Database changed
+
+OurSQL[test]> show table test;
+You have an error in your SQL syntax; check the manual that corresponds to your OurSQL server version for the right syntax to use near "table" at line 1
+OurSQL[test]> show tables;
+All tables:
+* user
+* user1
+
+OurSQL[test]> help table user;
+{u'username': {u'is_null': u'0', u'is_foreign': u'0', u'data_length': u'50', u'data_type': u'char', u'is_primary': u'0'}, u'password': {u'is_null': u'0', u'is_foreign': u'0', u'data_length': u'50', u'data_type': u'char', u'is_primary': u'0'}, u'id': {u'is_null': u'0', u'is_foreign': u'0', u'data_length': u'4', u'data_type': u'int', u'is_primary': u'1'}}
+OurSQL[test]> create table user2(
+            >id int 4 0 1 0,
+            >name char 16 0 0 0);
+Table created
+OurSQL[test]> show tables;
+All tables:
+* user2
+* user
+* user1
+
+OurSQL[test]> insert into user2 (id,name) values (1,test);
+Query OK, 2 row(s) affected
+OurSQL[test]> select * from user2 where id=1;
+(u'id:', u'1')
+(u'name:', u'test')
+
+Query OK!
+OurSQL[test]> update user2 set name=xb where id=1;
+Query OK, 1 row(s) affected
+OurSQL[test]> select * from user2 where id=1;
+(u'id:', u'1')
+(u'name:', u'xb')
+
+Query OK!
+OurSQL[test]> select name from user2 where id=1;
+('name:', u'xb')
+
+Query OK!
+OurSQL[test]> select id,name from user2 where id=1;
+('id:', u'1')
+('name:', u'xb')
+
+Query OK!
+OurSQL[test]> delete from user2 where id=1;
+Query OK, 1 row(s) affected
+OurSQL[test]> select * from user2;
+Query OK!
+OurSQL[test]> drop user2;
+Table is droped
+OurSQL[oursql]> grant mmp on mmp  to root;
+Query OK, 1 row(s) affected
+OurSQL[oursql]> revoke  mmp on mmp from  root;
+Query OK, 1 row(s) affected
